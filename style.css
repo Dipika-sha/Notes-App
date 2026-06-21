@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #000;
+}
+
+.container {
+    width: 600px;
+    padding: 30px;
+    border-radius: 25px;
+    background: linear-gradient(90deg, #af5959, rgb(105, 105, 61), rgb(24, 24, 24), #670b53);
+    background-size: 600% 600%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .2);
+    animation: gradientMove 8s ease infinite;
+    backdrop-filter: blur(8px);
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 25px;
+}
+
+textarea {
+    width: 100%;
+    height: 140px;
+    border: none;
+    outline: none;
+    border-radius: 18px;
+    padding: 15px;
+    font-size: 18px;
+    resize: none;
+    margin-bottom: 20px;
+}
+
+#addbtn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 15px;
+    background: #119b5f;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 25px;
+}
+
+#addbtn:hover {
+    opacity: .9;
+    background-color: rgb(5, 119, 76);
+    transform: translateY(-2px);
+}
+
+#notesContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.note {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px;
+    border-radius: 18px;
+    background: linear-gradient(90deg, #073f53, #b14e35, #7340b8, #9b3c0c);
+    background-size: 600% 600%;
+    animation: gradientMove 8s ease infinite;
+    color: black;
+    font-weight: bold;
+}
+
+.note p {
+    font-size: 22px;
+}
+
+.note-time {
+    color: rgba(32, 31, 31, 0.6);
+    font-size: 14px;
+    margin-left: auto;
+    margin-right: 15px;
+}
+
+.note button {
+    border: none;
+    padding: 10px 18px;
+    border-radius: 10px;
+    background: #ff4d4d;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.note button:hover {
+    background: red;
+}
+
+#noteCount {
+    margin-top: 15px;
+    color: white;
+
+    font-weight: 800;
+}
+
+note button:hover {
+    background: #dc2626;
+}
+
+.note-time {
+    display: block;
+    margin-top: 8px;
+    color: rgb(50, 48, 48);
+    font-size: 12px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
