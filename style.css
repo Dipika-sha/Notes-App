@@ -115,6 +115,7 @@ textarea {
     color: white;
     cursor: pointer;
     font-size: 16px;
+    margin-left: 10px;
 }
 
 .note button:hover {

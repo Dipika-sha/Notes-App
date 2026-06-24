@@ -23,6 +23,24 @@ function showNote(noteObj) {
   time.innerText = noteObj.date;
   time.classList.add("note-time");
 
+  const editbtn = document.createElement("button");
+  editbtn.innerText = "Edit";
+
+  editbtn.addEventListener("click", function () {
+    const updateNote = prompt("Edit Note", noteObj.text);
+
+    if (updateNote) {
+      noteObj.text = updateNote;
+
+      localStorage.setItem("notes", JSON.stringify(notes)
+   
+    );
+
+      location.reload();
+       p.innerText =updateNote;
+    }
+  });
+
   const deletebtn = document.createElement("button");
   deletebtn.innerText = "Delete";
 
@@ -45,6 +63,7 @@ function showNote(noteObj) {
   div.appendChild(p);
   div.appendChild(time);
   div.appendChild(deletebtn);
+  div.appendChild(editbtn);
 
   notesContainer.appendChild(div);
 }
